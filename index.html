@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albab Hasan</title>
+    <title>Albab Hasan - Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -575,7 +575,137 @@
             transform: translateY(-50%) translateY(0);
         }
 
-        /* Responsive Design */
+        /* Projects Section Styles */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .project-item {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 400ms ease;
+            background: rgba(26, 26, 26, 0.3);
+        }
+
+        .project-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            background: rgba(26, 26, 26, 0.6);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--dynamic-text);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 150ms ease;
+        }
+
+        .project-tech {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .project-description {
+            color: var(--dynamic-text);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: color 150ms ease;
+        }
+
+        /* Achievements Section Styles */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .achievement-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 400ms ease;
+            background: rgba(26, 26, 26, 0.3);
+        }
+
+        .achievement-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            background: rgba(26, 26, 26, 0.6);
+        }
+
+        .achievement-rank {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-desc {
+            color: var(--dynamic-text);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 150ms ease;
+        }
+
+        /* Learning Section Styles */
+        .learning-content {
+            margin-top: 2rem;
+        }
+
+        .learning-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .learning-item {
+            padding: 2rem;
+            border-left: 3px solid var(--accent);
+            background: rgba(26, 26, 26, 0.3);
+            transition: all 400ms ease;
+        }
+
+        .learning-item:hover {
+            background: rgba(26, 26, 26, 0.6);
+            transform: translateX(10px);
+        }
+
+        .learning-title {
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            color: var(--dynamic-text);
+            margin-bottom: 1rem;
+            transition: color 150ms ease;
+        }
+
+        .learning-desc {
+            color: var(--dynamic-text);
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            transition: color 150ms ease;
+        }
         @media (max-width: 768px) {
             .navigation {
                 top: 2rem;
@@ -825,6 +955,9 @@
                     <a href="#hero">ABOUT</a>
                 </li>
                 <li>
+                    <a href="#projects">PROJECTS</a>
+                </li>
+                <li>
                     <a href="#skills">SKILLS</a>
                 </li>
                 <li>
@@ -863,6 +996,117 @@
                     <br>
                     <p>When I'm not coding, you'll find me competing in programming contests, building simulations, 
                     or exploring the latest developments in machine learning and aerospace applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">FEATURED PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="project-item fade-in-left">
+                    <div class="project-header">
+                        <h3 class="project-title">ASH</h3>
+                        <div class="project-tech">C • Systems Programming</div>
+                    </div>
+                    <p class="project-description">
+                        A fully-featured Unix-like shell implementation with job control, pipes, I/O redirection, 
+                        and advanced features like command completion and syntax highlighting. Built from scratch 
+                        to understand operating system internals.
+                    </p>
+                </div>
+
+                <div class="project-item fade-in-right">
+                    <div class="project-header">
+                        <h3 class="project-title">SNEK</h3>
+                        <div class="project-tech">C • Language Design</div>
+                    </div>
+                    <p class="project-description">
+                        A Python interpreter written in C, featuring a complete lexer, parser, and runtime engine. 
+                        Supports core Python features including variables, functions, control flow, and basic data structures.
+                    </p>
+                </div>
+
+                <div class="project-item fade-in-left">
+                    <div class="project-header">
+                        <h3 class="project-title">CUDA-FRACTALS</h3>
+                        <div class="project-tech">CUDA • GPU Programming</div>
+                    </div>
+                    <p class="project-description">
+                        Stunning fractal visualizations powered by CUDA parallel computing. Generates complex 
+                        mathematical patterns in real-time, showcasing the beauty of mathematics through 
+                        high-performance GPU programming.
+                    </p>
+                </div>
+
+                <div class="project-item fade-in-right">
+                    <div class="project-header">
+                        <h3 class="project-title">DONUT</h3>
+                        <div class="project-tech">C • Graphics Programming</div>
+                    </div>
+                    <p class="project-description">
+                        An ASCII art spinning donut animation that demonstrates 3D graphics concepts without 
+                        external libraries. Pure mathematics and terminal graphics combined into a mesmerizing 
+                        rotating torus visualization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">COMPETITIVE ACHIEVEMENTS</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item fade-in-scale">
+                    <div class="achievement-rank">TOP 1000</div>
+                    <div class="achievement-desc">Consistent ranking across major coding platforms</div>
+                </div>
+
+                <div class="achievement-item fade-in-scale">
+                    <div class="achievement-rank">#155</div>
+                    <div class="achievement-desc">Weekly Contest 453 - LeetCode</div>
+                </div>
+
+                <div class="achievement-item fade-in-scale">
+                    <div class="achievement-rank">964</div>
+                    <div class="achievement-desc">Codeforces Rating</div>
+                </div>
+
+                <div class="achievement-item fade-in-scale">
+                    <div class="achievement-rank">1449</div>
+                    <div class="achievement-desc">LeetCode Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently Learning Section -->
+    <section id="learning" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">CURRENTLY LEARNING</h2>
+            <div class="learning-content fade-in-scale">
+                <p class="large-text">
+                    Always pushing boundaries and expanding my <span class="accent-text">knowledge horizons</span>.
+                </p>
+                <div class="learning-areas">
+                    <div class="learning-item fade-in">
+                        <h3 class="learning-title">Operating Systems</h3>
+                        <p class="learning-desc">Deep diving into kernel development, memory management, and system call implementation</p>
+                    </div>
+                    
+                    <div class="learning-item fade-in">
+                        <h3 class="learning-title">Natural Language Processing</h3>
+                        <p class="learning-desc">Exploring transformer architectures, attention mechanisms, and modern NLP applications</p>
+                    </div>
+                    
+                    <div class="learning-item fade-in">
+                        <h3 class="learning-title">Industrial Machine Learning</h3>
+                        <p class="learning-desc">Learning production ML systems, MLOps, and scalable AI infrastructure</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1069,6 +1313,9 @@
             const sectionMapping = {
                 'hero': 'hero',
                 'about': 'hero',
+                'projects': 'projects',
+                'achievements': 'projects',
+                'learning': 'projects',
                 'skills': 'skills',
                 'journey': 'skills',
                 'contact': 'motto',
